@@ -28,8 +28,8 @@ int binaryseach(int arr[] , int key , int size)
 
 int main ()
 {
-    int arr[] = {1, 3, 4, 5, 6, 7};
-    int key = 5;
+    // int arr[] = {1, 3, 4, 5, 6, 7};
+    int key = 77;
     int arr[100];
     for (int i = 0; i < 100; i++)
     {
