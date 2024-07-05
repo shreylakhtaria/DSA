@@ -25,7 +25,7 @@ int specialArray(int nums[], int size)
     int findspecialnumberbinary(int nums[], int size)
     {
         int left = 0;
-        int right = size - 1;
+        int right = size;
 
         while (left <= right)
         {
@@ -34,17 +34,17 @@ int specialArray(int nums[], int size)
 
             for (int i = 0; i < size; i++)
             {
-                if (nums[i] >= nums[mid])
+                if (nums[i] >= mid)
                 {
                     count++;
                 }
             }
 //binary search
-            if (count == nums[mid])
+            if (count == mid)
             {
-                return nums[mid];
+                return mid;
             }
-            else if (count < nums[mid])
+            else if (count < mid)
             {
                 right = mid - 1;
             }
@@ -59,7 +59,7 @@ int specialArray(int nums[], int size)
 
     int main()
     {
-        int nums[] = {0, 4, 3, 0, 4};
+        int nums[] = {3,5};
         int size = sizeof(nums) / sizeof(nums[0]);
 
         int result = specialArray(nums, size);
