@@ -30,8 +30,8 @@ int main ()
 {
     // int arr[] = {1, 3, 4, 5, 6, 7};
     int key = 77;
-    int arr[100];
-    for (int i = 0; i < 100; i++)
+    int arr[10];
+    for (int i = 0; i < 10; i++)
     {
         arr[i] = i + 1;         
     }

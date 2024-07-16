@@ -21,11 +21,19 @@ void printPairsDivisibleByK(int arr[], int n, int k) {
 }
 
 int main() {
-    int arr[] = {3, 1, 2, 6, 9, 4};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int k = 5;
+    int n, k;
+    cout << "Enter the number of elements: ";
+    cin >> n;
     
-    cout << "MY name is Shrey Lakhtaria from 23cs039" << endl;
+    int arr[n];
+    cout << "Enter the elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    
+    cout << "Enter the key: ";
+    cin >> k;
+    
     printPairsDivisibleByK(arr, n, k);
     
     return 0;

@@ -59,8 +59,16 @@ int specialArray(int nums[], int size)
 
     int main()
     {
-        int nums[] = {3,5};
-        int size = sizeof(nums) / sizeof(nums[0]);
+        int size;
+        cout << "Enter the size of the array: ";
+        cin >> size;
+
+        int nums[size];
+        cout << "Enter the elements of the array: ";
+        for (int i = 0; i < size; i++)
+        {
+            cin >> nums[i];
+        }
 
         int result = specialArray(nums, size);
         cout << "Output using findSpecialNumber: " << result << endl;
