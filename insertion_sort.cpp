@@ -14,7 +14,7 @@ void insertionsort(int n, int arr[])
             arr[j + 1] = arr[j];
             j = j - 1;
         }
-        arr[j + 1] = key;
+        arr[j + 1] = key; 
     }
 }
 
@@ -23,7 +23,7 @@ int main()
     cout << "Enter the size of the array:";
     int n, temp;
     cin >> n;
-    int *arr = new int[n];
+    int arr[n];
     for (int i = 0; i < n; i++)
     {
         cout << "Enter the elements of the array:";

@@ -5,13 +5,15 @@ void printPairsDivisibleByK(int arr[], int size, int k) {
     int remainderCount[k] = {0};
 
     // Count the remainders of each element when divided by k
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) 
+    {
         int remainder = arr[i] % k;
         remainderCount[remainder]++;
     }
 
     // Check if pairs can be formed
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) 
+    {
         int remainder = arr[i] % k;
         int complement = (k - remainder) % k;
 
@@ -25,7 +27,7 @@ void printPairsDivisibleByK(int arr[], int size, int k) {
 
 int main() 
 {
-    int arr[] = {3, 1, 2, 6, 9, 4};
+    int arr[] = {3, -1, 2, 6, 9, 4};
     int size = sizeof(arr) / sizeof(arr[0]);
     int k = 5;
 

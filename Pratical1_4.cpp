@@ -1,80 +1,54 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
-int specialArray(int nums[], int size)
+int specialArray(const vector<int>& nums)
 {
-    for (int x = 0; x <= size; x++)
+    int size = nums.size();
+    vector<int> count(size + 1, 0);
+
+    for (int num : nums)
     {
-        int count = 0;
-        for (int i = 0; i < size; i++)
+        if (num <= size)
         {
-            if (nums[i] >= x)
-            {
-                count++;
-            }
+            count[num]++;
         }
-        if (count == x)
+        else
         {
-            return x;
+            count[size]++;
         }
     }
+
+    int totalCount = 0;
+    for (int i = size; i >= 0; i--)
+    {
+        totalCount += count[i];
+        if (totalCount == i)
+        {
+            return i;
+        }
+    }
+
     return -1;
 }
 
-    int findspecialnumberbinary(int nums[], int size)
+int main()
+{
+    int size;
+    cout << "Enter the size of the array: ";
+    cin >> size;
+
+    vector<int> nums(size);
+    cout << "Enter the elements of the array: ";
+    for (int i = 0; i < size; i++)
     {
-        int left = 0;
-        int right = size;
-
-        while (left <= right)
-        {
-            int mid = left + (right - left) / 2; //mid value to control overflow
-            int count = 0;
-
-            for (int i = 0; i < size; i++)
-            {
-                if (nums[i] >= mid)
-                {
-                    count++;
-                }
-            }
-//binary search
-            if (count == mid)
-            {
-                return mid;
-            }
-            else if (count < mid)
-            {
-                right = mid - 1;
-            }
-            else
-            {
-                left = mid + 1;
-            }
-        }
-
-        return -1;
+        cin >> nums[i];
     }
 
-    int main()
-    {
-        int size;
-        cout << "Enter the size of the array: ";
-        cin >> size;
+    int result = specialArray(nums);
+    cout << "Output using specialArray: " << result << endl;
 
-        int nums[size];
-        cout << "Enter the elements of the array: ";
-        for (int i = 0; i < size; i++)
-        {
-            cin >> nums[i];
-        }
-
-        int result = specialArray(nums, size);
-        cout << "Output using findSpecialNumber: " << result << endl;
-
-        int binaryResult = findspecialnumberbinary(nums, size);
-        cout << "Output using findspecialnumberbinary: " << binaryResult << endl;
-
-        return 0;
-    }
+    return 0;
+}

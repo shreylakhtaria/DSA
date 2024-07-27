@@ -21,7 +21,6 @@ void SelectionSort(int n, int arr[])
 
 int main()
 {
-
     int n;
     int arr[n];
     cout << "enter the size of array: " << endl;
