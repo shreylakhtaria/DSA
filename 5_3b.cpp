@@ -23,7 +23,8 @@ string infixToPostfix(string infix) {
     stack<char> s;
     string postfix;
 
-    for (char c : infix) {
+    for (char c : infix) 
+    {
         // If the character is an operand, append it to the postfix expression
         if (isalnum(c))
             postfix += c;

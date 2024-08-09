@@ -19,6 +19,7 @@ int specialArray(const vector<int>& nums)
         {
             count[size]++;
         }
+    
     }
 
     int totalCount = 0;

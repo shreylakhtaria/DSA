@@ -1,2 +1,1 @@
-
-    if (count == size) {
+1

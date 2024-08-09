@@ -57,6 +57,7 @@
         }
         return top == -1;
     }
+
     int main()
     {
         string str;

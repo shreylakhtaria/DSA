@@ -10,6 +10,7 @@ int binaryseach(int arr[] , int key , int size)
     while (start <= end)
     {
         int mid = start + (end - start) / 2; // to control overflow
+        
         if (arr[mid] == key)
         {
             return mid;
