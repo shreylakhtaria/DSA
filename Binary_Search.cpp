@@ -30,14 +30,16 @@ int binaryseach(int arr[] , int key , int size)
 int main ()
 {
     // int arr[] = {1, 3, 4, 5, 6, 7};
-    int key = 77;
+    int key; 
+    cout << "Enter the element you want to search: ";
+    cin >> key;
     int arr[10];
     for (int i = 0; i < 10; i++)
     {
         arr[i] = i + 1;         
     }
-    int size = sizeof(arr) / sizeof(arr[0]);
-    int result = binaryseach(arr, key, size);
+    // int size = sizeof(arr) / sizeof(arr[0]);
+    int result = binaryseach(arr, key, 10);
     if (result != -1)
     {
         cout << "Element found at index " << result;

@@ -143,7 +143,7 @@ void printList(struct Node *head)
     printf("\n");
 }
 
-void removefrombetween(struct node ** head, int position)
+void removefrombetween(struct Node ** head, int position)
 {
     if (*head == NULL)
     {

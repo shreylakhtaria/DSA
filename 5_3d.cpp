@@ -8,7 +8,7 @@ int binary_from_1_to_n(int n)
     queue<string> q;
     q.push("1"); // Enqueue the first binary number
     
-
+    // 1 = 1 , 2 = 10 , 3 = 11 , 4 = 100 , 5 = 101 
     while (n--)
     {
         string s1 = q.front(); // Dequeue the front binary number   
